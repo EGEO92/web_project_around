@@ -41,7 +41,12 @@
 .places__text {
   font-size: 1.2rem;
   line-height: 1.2;
+  font-weight: 900;
   align-self: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 200px;
 }
 
 .places__button {
