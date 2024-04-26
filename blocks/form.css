@@ -64,3 +64,32 @@
   background-color: #000;
   border: none;
 }
+
+@media screen and (max-width: 550px) {
+  .popup {
+    width: 282px;
+    height: 322px;
+    position: fixed;
+    top: 123px;
+    left: 19px;
+  }
+
+  .popup__title {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-top: 25px;
+    margin-left: 35px;
+  }
+
+  .popup__text {
+    width: 238px;
+    margin-left: 22px;
+    margin-right: 22px;
+  }
+
+  .popup__submit {
+    width: 238px;
+    margin-left: 22px;
+    margin-right: 22px;
+  }
+}
