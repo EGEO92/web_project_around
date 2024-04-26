@@ -14,7 +14,7 @@
 }
 
 .popup__show {
-  visibility: 1;
+  visibility: visible;
 }
 
 .popup__title {

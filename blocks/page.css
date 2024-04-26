@@ -6,3 +6,7 @@
   color: #fff;
   font-family: "Inter", Arial, sans-serif;
 }
+
+.page__popup {
+  opacity: 0.3;
+}
