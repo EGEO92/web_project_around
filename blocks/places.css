@@ -56,6 +56,7 @@
   height: 19px;
   border: none;
   align-self: center;
+  background-color: #fff;
 }
 
 .places__button:hover {
