@@ -22,6 +22,8 @@
   font-weight: 900;
   margin-top: 25px;
   margin-left: 35px;
+  margin-top: 35px;
+  margin-bottom: 30px;
 }
 
 .popup__text {
@@ -34,11 +36,6 @@
   border-top: none;
   border-right: none;
   border-left: none;
-}
-
-.popup__title {
-  margin-top: 35px;
-  margin-bottom: 30px;
 }
 
 .popup__name {
