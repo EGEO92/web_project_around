@@ -36,6 +36,11 @@
   border-left: none;
 }
 
+.popup__title {
+  margin-top: 35px;
+  margin-bottom: 30px;
+}
+
 .popup__name {
   margin-top: 35px;
   margin-bottom: 30px;
@@ -43,11 +48,6 @@
 
 .popup__occupation {
   margin-bottom: 45px;
-}
-
-.popup__title {
-  margin-top: 35px;
-  margin-bottom: 30px;
 }
 
 .popup__link {
