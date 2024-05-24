@@ -45,6 +45,15 @@
   margin-bottom: 45px;
 }
 
+.popup__title {
+  margin-top: 35px;
+  margin-bottom: 30px;
+}
+
+.popup__link {
+  margin-bottom: 45px;
+}
+
 .popup__submit {
   width: 358px;
   height: 50.15px;

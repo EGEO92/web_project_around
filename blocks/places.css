@@ -3,13 +3,15 @@
   margin: 50px 200px 60px;
   display: flex;
   flex-wrap: wrap;
+  gap: 15px;
 }
 
 .places__card {
   width: 282px;
-  margin-top: 20px;
-  margin-right: 17px;
+  margin-top: 0px;
+  margin-right: 0px;
   padding: 0;
+  position: relative;
 }
 
 .places__card:first-of-type {
@@ -24,6 +26,8 @@
   width: 282px;
   height: 282px;
   margin-bottom: 0;
+  border-top-left-radius: 2%;
+  border-top-right-radius: 2%;
 }
 
 .places__wraper {
@@ -49,7 +53,7 @@
   max-width: 200px;
 }
 
-.places__button {
+.places__button-like {
   background-image: url(../images/Heart_Vector.png);
   background-repeat: no-repeat;
   width: 21px;
@@ -59,13 +63,60 @@
   background-color: #fff;
 }
 
-.places__button:hover {
+.places__button-like:hover {
   opacity: 0.7;
 }
 
-.places__button:active {
+.places__button-like:active {
   background-image: url(../images/heart_vector_active.png);
   background-repeat: no-repeat;
+}
+
+.places__button-likeactive {
+  background-image: url(../images/heart_vector_active.png);
+  background-repeat: no-repeat;
+}
+
+.places__button-trash {
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  top: 25px;
+  right: 15px;
+}
+
+.places__imgtrash {
+  position: relative;
+  top: -10px;
+  left: -8px;
+}
+
+.places__popupcard {
+  position: fixed;
+  height: 565px;
+  width: 816px;
+  top: 90px;
+  bottom: 90px;
+  left: 20%;
+  right: 20%;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  /*align-items: center;*/
+  visibility: hidden;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3));
+  background-size: 100vh;
+}
+
+.places__popupimg {
+  height: 540px;
+  max-width: 816px;
+  margin: auto;
+}
+
+.places__popuptitle {
+  font-size: 1rem;
+  align-self: center;
 }
 
 @media screen and (max-width: 1150px) {
@@ -80,5 +131,19 @@
     height: fit-content;
     flex-direction: column;
     margin: 36px 19px;
+  }
+
+  .places__popupcard {
+    width: 240px;
+    height: 320px;
+    top: 136px;
+    left: 40px;
+    gap: 0px;
+    opacity: 0px;
+  }
+
+  .places__popupimg {
+    width: 240px;
+    height: 299px;
   }
 }

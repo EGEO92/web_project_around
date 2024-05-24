@@ -24,6 +24,7 @@
           alt="Que bonito logo que dice alrededor de U S"
         />
       </header>
+      <div class="page-filter"></div>
       <section class="profile">
         <img
           class="profile__image"
@@ -51,77 +52,38 @@
           />
         </button>
       </section>
-      <section class="places">
+      <section class="places"></section>
+      <template id="plantilla">
         <div class="places__card">
-          <img
-            class="places__image"
-            src="./images/kirill-pershin-1088404-unsplashyosemite.png"
-            alt="Bonito paisaje"
-          />
+          <img class="places__image" src="" alt="Bonito paisaje" />
           <div class="places__wraper">
-            <h4 class="places__text">Valle de Yosemite</h4>
-            <button class="places__button button"></button>
+            <h4 class="places__text"></h4>
+            <button class="places__button-like button"></button>
+          </div>
+          <button class="button places__button-trash">
+            <img
+              class="places__imgtrash"
+              src="./images/Trash.png"
+              alt="boton para eliminar tarjeta"
+            />
+          </button>
+          <div class="places__popupcard">
+            <img
+              class="places__popupimg"
+              src="https://media.istockphoto.com/id/2151991847/es/foto/dalia-p%C3%BArpura-clara-perfecta-ampliada-aislada-sobre-fondo-blanco.jpg?s=1024x1024&w=is&k=20&c=bhC03UzPPPP1VdfBh1ToHR6rsbzcqOGT28PodirkRc0="
+              alt="Bonito paisaje"
+            />
+            <p class="places__popuptitle">hola</p>
+            <button class="popup__close popup__closecard button">
+              <img src="./images/Close_Icon.png" alt="boton de cerrar" />
+            </button>
           </div>
         </div>
-        <div class="places__card">
-          <img
-            class="places__image"
-            src="./images/kirill-pershin-1404681-unsplashlouise.png"
-            alt="Bonito paisaje"
-          />
-          <div class="places__wraper">
-            <h4 class="places__text">Lago Louise</h4>
-            <button class="places__button button"></button>
-          </div>
-        </div>
-        <div class="places__card no-right-margin">
-          <img
-            class="places__image"
-            src="./images/kirill-pershin-1556355-unsplashcalvas.png"
-            alt="Bonito paisaje"
-          />
-          <div class="places__wraper">
-            <h4 class="places__text">Montañas Calvas</h4>
-            <button class="places__button button"></button>
-          </div>
-        </div>
-        <div class="places__card">
-          <img
-            class="places__image"
-            src="./images/kirill-pershin-1404681-unsplashlatemar.png"
-            alt="Bonito paisaje"
-          />
-          <div class="places__wraper">
-            <h4 class="places__text">Latemar</h4>
-            <button class="places__button button"></button>
-          </div>
-        </div>
-        <div class="places__card">
-          <img
-            class="places__image"
-            src="./images/kirill-pershin-1556355-unsplashvanoise.png"
-            alt="Bonito paisaje"
-          />
-          <div class="places__wraper">
-            <h4 class="places__text">Vanoise National Park</h4>
-            <button class="places__button button"></button>
-          </div>
-        </div>
-        <div class="places__card no-right-margin">
-          <img
-            class="places__image"
-            src="./images/kirill-pershin-1088404-unsplashbraies.png"
-            alt="Bonito paisaje"
-          />
-          <div class="places__wraper">
-            <h4 class="places__text">Lago di Braies</h4>
-            <button class="places__button button"></button>
-          </div>
-        </div>
-      </section>
-      <section class="popup">
+      </template>
+
+      <section class="popup" id="profile-popup">
         <h2 class="popup__title">Edit Profile</h2>
-        <form class="popup__form" action="#" autocomplete="off">
+        <form class="popup__form-profile" action="#" autocomplete="off">
           <input
             class="popup__name popup__text"
             type="text"
@@ -141,6 +103,29 @@
           <input class="popup__submit button" type="submit" value="Guardar" />
         </form>
         <button class="popup__close button">
+          <img src="./images/Close_Icon.png" alt="boton de cerrar" />
+        </button>
+      </section>
+      <section class="popup" id="cards-popup">
+        <h2 class="popup__title">Nuevo lugar</h2>
+        <form class="popup__form-add" action="#" autocomplete="off">
+          <input
+            class="popup__title popup__text"
+            type="text"
+            name="lugar"
+            id="place"
+            placeholder="Título"
+          />
+          <input
+            class="popup__link popup__text"
+            type="url"
+            name="paisaje"
+            id="link"
+            placeholder="Enlace a la imagen"
+          />
+          <input class="popup__submit button" type="submit" value="Crear" />
+        </form>
+        <button class="popup__close popup__closeadd button">
           <img src="./images/Close_Icon.png" alt="boton de cerrar" />
         </button>
       </section>
