@@ -45,6 +45,8 @@ const inputOccupation = document.querySelector("#about");
 const inputTitle = document.querySelector("#place");
 const inputImg = document.querySelector("#link");
 const addButton = document.querySelector(".profile__add-button");
+const pageClose = document.querySelector(".page-filter");
+const inputKey = document.querySelector(".page");
 
 function createCards(name, link) {
   const card = template.cloneNode(true).content.querySelector(".places__card");
@@ -74,10 +76,20 @@ function createCards(name, link) {
     opacityPlaces.classList.remove("page__popup");
   });
 
-  popupImgClose.addEventListener("click", function () {
+  function closeCardPopup() {
     removeOpacity();
     popupCard.classList.remove("popup__show");
     cardImg.classList.remove("page__popup");
+  }
+
+  popupImgClose.addEventListener("click", closeCardPopup);
+
+  pageClose.addEventListener("click", closeCardPopup);
+
+  inputKey.addEventListener("keydown", function (input) {
+    if (input.key === "Escape") {
+      closeCardPopup();
+    }
   });
 
   cardPlaces.append(card);
@@ -127,6 +139,15 @@ addButton.addEventListener("click", openAddPopup);
 editBottun.addEventListener("click", openProfilePopup);
 closeButton.addEventListener("click", closeProfilePopup);
 closeAddButton.addEventListener("click", closeAddPopup);
+pageClose.addEventListener("click", closeAddPopup);
+pageClose.addEventListener("click", closeProfilePopup);
+
+inputKey.addEventListener("keydown", function (input) {
+  if (input.key === "Escape") {
+    closeAddPopup();
+    closeProfilePopup();
+  }
+});
 
 function formMakeChanges(evt) {
   evt.preventDefault();
@@ -166,10 +187,20 @@ function addCards(evt) {
     opacityPlaces.classList.remove("page__popup");
   });
 
-  popupImgClose.addEventListener("click", function () {
+  function closeCardPopup() {
     removeOpacity();
     popupCard.classList.remove("popup__show");
     cardImg.classList.remove("page__popup");
+  }
+
+  popupImgClose.addEventListener("click", closeCardPopup);
+
+  pageClose.addEventListener("click", closeCardPopup);
+
+  inputKey.addEventListener("keydown", function (input) {
+    if (input.key === "Escape") {
+      closeCardPopup();
+    }
   });
 
   cardPlaces.prepend(card);

@@ -69,7 +69,7 @@
           </button>
           <div class="places__popupcard">
             <img class="places__popupimg" src="#" alt="#" />
-            <p class="places__popuptitle">hola</p>
+            <p class="places__popuptitle"></p>
             <button class="popup__close popup__closecard button">
               <img src="./images/Close_Icon.png" alt="boton de cerrar" />
             </button>
@@ -79,24 +79,38 @@
 
       <section class="popup" id="profile-popup">
         <h2 class="popup__title">Edit Profile</h2>
-        <form class="popup__form-profile" action="#" autocomplete="off">
+        <form class="popup__form-profile form" action="#" autocomplete="off">
           <input
-            class="popup__name popup__text"
+            class="popup__name popup__text form__input"
             type="text"
             name="name"
             id="name"
             value="Jacques Cousteau"
             placeholder="Nombre"
+            minlength="2"
+            maxlength="40"
+            required
           />
+          <span class="name-error form__error"></span>
+
           <input
-            class="popup__occupation popup__text"
+            class="popup__occupation popup__text form__input"
             type="text"
             name="about"
             id="about"
             value="Explorador"
             placeholder="Acerca de mi"
+            minlength="2"
+            maxlength="200"
+            required
           />
-          <input class="popup__submit button" type="submit" value="Guardar" />
+          <span class="about-error form__error"></span>
+
+          <input
+            class="popup__submit button form__submit"
+            type="submit"
+            value="Guardar"
+          />
         </form>
         <button class="popup__close button">
           <img src="./images/Close_Icon.png" alt="boton de cerrar" />
@@ -104,22 +118,35 @@
       </section>
       <section class="popup" id="cards-popup">
         <h2 class="popup__title">Nuevo lugar</h2>
-        <form class="popup__form-add" action="#" autocomplete="off">
+        <form class="popup__form-add form" action="#" autocomplete="off">
           <input
-            class="popup__title popup__text"
+            class="popup__title popup__name popup__text form__input"
             type="text"
             name="lugar"
             id="place"
             placeholder="Título"
+            minlength="2"
+            maxlength="30"
+            required
           />
+          <span class="place-error form__error"></span>
+
           <input
-            class="popup__link popup__text"
+            class="popup__link popup__text form__input"
             type="url"
             name="paisaje"
             id="link"
             placeholder="Enlace a la imagen"
+            minlength="7"
+            required
           />
-          <input class="popup__submit button" type="submit" value="Crear" />
+          <span class="link-error form__error"></span>
+
+          <input
+            class="popup__submit button form__submit"
+            type="submit"
+            value="Crear"
+          />
         </form>
         <button class="popup__close popup__closeadd button">
           <img src="./images/Close_Icon.png" alt="boton de cerrar" />
@@ -128,5 +155,6 @@
     </main>
     <footer class="footer">&copy; 2024 EGEO92</footer>
     <script src="./scripts/index.js"></script>
+    <script src="./scripts/validation.js"></script>
   </body>
 </html>
