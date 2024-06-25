@@ -24,8 +24,22 @@ import {
   inputKey,
 } from "./utils.js";
 
-import Card from "./card.js";
+import Card from "./Card.js";
 import FormValidator from "./FormValidator.js";
+
+initialCards.forEach((element) => {
+  const initialCard = new Card(element.name, element.link);
+  cardPlaces.append(initialCard.createCard());
+});
+
+function addCards(evt) {
+  evt.preventDefault();
+
+  const newCard = new Card(inputTitle.value, inputImg.value);
+
+  cardPlaces.prepend(newCard.createCard());
+  closeAddPopup();
+}
 
 const enableValidation = (settings) => {
   const formList = Array.from(document.querySelectorAll(settings.formSelector));
@@ -45,11 +59,6 @@ enableValidation({
   inactiveButtonClass: "form__submit-disabled",
   inputErrorClass: "form__input-invalid",
   errorClass: "form__error",
-});
-
-initialCards.forEach((element) => {
-  const initialCard = new Card(element.name, element.link);
-  cardPlaces.append(initialCard.createCard());
 });
 
 export function putOpacity() {
@@ -107,15 +116,6 @@ function formMakeChanges(evt) {
   changeName.textContent = inputName.value;
   changeOccupation.textContent = inputOccupation.value;
   closeProfilePopup();
-}
-
-function addCards(evt) {
-  evt.preventDefault();
-
-  const newCard = new Card(inputTitle.value, inputImg.value);
-
-  cardPlaces.prepend(newCard.createCard());
-  closeAddPopup();
 }
 
 formProfileElement.addEventListener("submit", formMakeChanges);
