@@ -73,6 +73,16 @@
   border: none;
 }
 
+.close {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  background-color: #000;
+  border: none;
+}
+
 .form__input {
   outline: none;
   appearance: none;

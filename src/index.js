@@ -71,7 +71,7 @@ editButton.addEventListener("click", () => {
   popupProfile.open();
 });
 
-const popupImg = new PopupWithImage(".places__popupcard");
+const popupImg = new PopupWithImage(".card");
 popupImg.setEventListeners();
 
 const popupAddCard = new PopupWithForm("#cards-popup", () => {

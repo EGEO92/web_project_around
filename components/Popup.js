@@ -3,7 +3,7 @@ export default class Popup {
     this._popupElement = document.querySelector(popupSelector);
     this._pageFilter = document.querySelector(".page-filter");
     this._inputKey = document.querySelector(".page");
-    this._closeBtn = this._popupElement.querySelector(".popup__close");
+    this._closeBtn = this._popupElement.querySelector(".close");
     this.addEventListeners();
   }
 
