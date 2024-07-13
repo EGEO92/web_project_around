@@ -13,14 +13,13 @@
       name="keywords"
       content="aprendizaje, lugares, tripleten, javascript, JSprincipiante, html5, css3"
     />
-    <link rel="stylesheet" href="./pages/index.css" />
   </head>
   <body class="page">
     <main>
       <header class="header">
         <img
           class="header__image"
-          src="./images/header_title.png"
+          id="header_title"
           alt="Que bonito logo que dice alrededor de U S"
         />
       </header>
@@ -28,7 +27,7 @@
       <section class="profile">
         <img
           class="profile__image"
-          src="./images/AvatarJacques_Cousteau.png"
+          id="profile__image"
           alt="Un buen hombre llamado Jacques Cousteau"
         />
         <div class="profile__wraper">
@@ -39,7 +38,7 @@
           <button class="profile__edit-button button">
             <img
               class="profile__editbutton-image"
-              src="./images/Edit_Button.png"
+              id="profile__editbutton-image"
               alt="Boton para editar perfil"
             />
           </button>
@@ -47,7 +46,7 @@
         <button class="profile__add-button button">
           <img
             class="profile__addbutton-image"
-            src="./images/Add_Button.png"
+            id="profile__addbutton-image"
             alt="Botón para agregar más imagenes"
           />
         </button>
@@ -63,19 +62,21 @@
           <button class="button places__button-trash">
             <img
               class="places__imgtrash"
+              id="places__imgtrash"
               src="./images/Trash.png"
               alt="boton para eliminar tarjeta"
             />
           </button>
-          <div class="places__popupcard">
-            <img class="places__popupimg" src="#" alt="#" />
-            <p class="places__popuptitle"></p>
-            <button class="popup__close popup__closecard button">
-              <img src="./images/Close_Icon.png" alt="boton de cerrar" />
-            </button>
-          </div>
         </div>
       </template>
+
+      <section class="places__popupcard">
+        <img class="places__popupimg" src="#" alt="#" />
+        <p class="places__popuptitle"></p>
+        <button class="popup__close popup__closecard button">
+          <img id="close__image" alt="boton de cerrar" />
+        </button>
+      </section>
 
       <section class="popup" id="profile-popup">
         <h2 class="popup__title">Edit Profile</h2>
@@ -115,9 +116,14 @@
           />
         </form>
         <button class="popup__close button">
-          <img src="./images/Close_Icon.png" alt="boton de cerrar" />
+          <img
+            src="<%= require ('./images/Close_Icon.png') %>"
+            id="close__image2"
+            alt="boton de cerrar"
+          />
         </button>
       </section>
+
       <section class="popup" id="cards-popup">
         <h2 class="popup__title">Nuevo lugar</h2>
         <form class="popup__form-add form" action="#" autocomplete="off">
@@ -128,7 +134,7 @@
             id="place"
             placeholder="Título"
             minlength="2"
-            maxlength="30"
+            maxlength="40"
             required
             autocomplete="off"
           />
@@ -153,11 +159,10 @@
           />
         </form>
         <button class="popup__close popup__closeadd button">
-          <img src="./images/Close_Icon.png" alt="boton de cerrar" />
+          <img id="close__image1" alt="boton de cerrar" />
         </button>
       </section>
     </main>
     <footer class="footer">&copy; 2024 EGEO92</footer>
-    <script type="module" src="./scripts/index.js"></script>
   </body>
 </html>

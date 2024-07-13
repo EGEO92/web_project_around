@@ -54,7 +54,7 @@
 }
 
 .places__button-like {
-  background-image: url(../images/Heart_Vector.png);
+  background-image: url(../src/images/Heart_Vector.png);
   background-repeat: no-repeat;
   width: 21px;
   height: 19px;
@@ -68,12 +68,12 @@
 }
 
 .places__button-like:active {
-  background-image: url(../images/heart_vector_active.png);
+  background-image: url(../src/images/heart_vector_active.png);
   background-repeat: no-repeat;
 }
 
 .places__button-likeactive {
-  background-image: url(../images/heart_vector_active.png);
+  background-image: url(../src/images/heart_vector_active.png);
   background-repeat: no-repeat;
 }
 
@@ -88,7 +88,7 @@
 .places__imgtrash {
   position: relative;
   top: -10px;
-  left: -8px;
+  left: -9px;
 }
 
 .places__popupcard {

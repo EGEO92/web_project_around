@@ -79,10 +79,6 @@
   border-bottom: solid 1px black;
 }
 
-/*.form__input:focus {
-  border-bottom: solid 1px blue;
-} */
-
 .form__input-invalid {
   border-bottom: solid 1px red;
 }
