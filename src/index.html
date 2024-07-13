@@ -51,7 +51,15 @@
           />
         </button>
       </section>
-      <section class="places"></section>
+      <section class="places">
+        <div class="card places__popupcard">
+          <img class="card__popupimg places__popupimg" src="#" alt="#" />
+          <p class="card__popuptitle places__popuptitle"></p>
+          <button class="card__button popup__close popup__closecard button">
+            <img id="close__image" alt="boton de cerrar" />
+          </button>
+        </div>
+      </section>
       <template id="plantilla">
         <div class="places__card">
           <img class="places__image" src="#" alt="#" />
@@ -69,14 +77,6 @@
           </button>
         </div>
       </template>
-
-      <div class="card places__popupcard">
-        <img class="card__popupimg places__popupimg" src="#" alt="#" />
-        <p class="card__popuptitle places__popuptitle"></p>
-        <button class="card__button popup__close popup__closecard button">
-          <img id="close__image" alt="boton de cerrar" />
-        </button>
-      </div>
 
       <section class="popup" id="profile-popup">
         <h2 class="popup__title">Edit Profile</h2>
