@@ -80,6 +80,7 @@
 @media screen and (max-width: 1150px) {
   .profile {
     margin: auto;
+    width: 98vw;
   }
 }
 
