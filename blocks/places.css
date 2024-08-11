@@ -91,6 +91,11 @@
   left: -9px;
 }
 
+.places__likes {
+  position: relative;
+  top: 30px;
+}
+
 .places__popupcard {
   position: fixed;
   height: 565px;

@@ -9,7 +9,43 @@
   width: 120px;
   height: 120px;
   margin: 0;
+  border-radius: 50%;
 }
+
+.profile__image-filter {
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  background-color: rgb(0, 0, 0);
+  border: none;
+  z-index: 1;
+}
+
+.profile__image-filter:hover {
+  width: 120px;
+  height: 120px;
+  opacity: 0.7;
+  background-image: url(../src/images/VectoravatarEdit.png);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: black;
+  z-index: 1;
+}
+
+/* .profile__popup-avatar {
+  background-color: #fff;
+  width: 430px;
+  height: 272px;
+  position: fixed;
+  top: 224px;
+  left: 425px;
+  visibility: visible;
+  z-index: 5;
+} */
+
 .profile__wraper {
   width: fit-content;
   display: flex;

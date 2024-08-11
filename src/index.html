@@ -25,15 +25,17 @@
       </header>
       <div class="page-filter"></div>
       <section class="profile">
+        <input type="button" class="profile__image-filter" />
         <img
           class="profile__image"
           id="profile__image"
-          alt="Un buen hombre llamado Jacques Cousteau"
+          alt="Imagen de perfil"
         />
+
         <div class="profile__wraper">
           <div class="profile__info">
-            <h2 class="profile__name">Jacques Cousteau</h2>
-            <p class="profile__occupation">Explorador</p>
+            <h2 class="profile__name"></h2>
+            <p class="profile__occupation"></p>
           </div>
           <button class="profile__edit-button button">
             <img
@@ -66,6 +68,7 @@
           <div class="places__wraper">
             <h4 class="places__text"></h4>
             <button class="places__button-like button"></button>
+            <span class="places__likes"></span>
           </div>
           <button class="button places__button-trash">
             <img
@@ -78,6 +81,49 @@
         </div>
       </template>
 
+      <section class="card__popup-confirmation popup" id="confirmation-popup">
+        <h2 class="profile__popup-title, popup__title">¿Estás seguro?</h2>
+        <form class="profile__form-confirmation form">
+          <input
+            class="popup__submit popup__submit-confirmation button form__submit"
+            type="submit"
+            name="confirmation"
+            value="Sí"
+          />
+        </form>
+        <button class="popup__close close popup__closeadd button">
+          <img id="close__image4" alt="boton de cerrar" />
+        </button>
+      </section>
+
+      <section class="profile__popup-avatar popup" id="avatar-popup">
+        <h2 class="profile__popup-title, popup__title">
+          Cambiar foto de perfil
+        </h2>
+        <form class="profile__form-avatar form">
+          <div class="popup-div">
+            <input
+              class="profile__input popup__avatar form__input popup__text"
+              type="url"
+              name="avatar"
+              id="avatar"
+              placeholder="Nueva imagen de perfil"
+              required
+              autocomplete="off"
+            />
+          </div>
+          <span class="avatar-error form__error"></span>
+          <input
+            class="popup__submit popup__submit-avatar button form__submit"
+            type="submit"
+            value="Guardar"
+          />
+        </form>
+        <button class="popup__close close popup__closeadd button">
+          <img id="close__image3" alt="boton de cerrar" />
+        </button>
+      </section>
+
       <section class="popup" id="profile-popup">
         <h2 class="popup__title">Edit Profile</h2>
         <form class="popup__form-profile form" action="#" autocomplete="off">
@@ -86,7 +132,6 @@
             type="text"
             name="name"
             id="name"
-            value="Jacques Cousteau"
             placeholder="Nombre"
             minlength="2"
             maxlength="40"
@@ -100,10 +145,7 @@
             type="text"
             name="about"
             id="about"
-            value="Explorador"
             placeholder="Acerca de mi"
-            minlength="2"
-            maxlength="200"
             required
             autocomplete="off"
           />
@@ -130,7 +172,7 @@
           <input
             class="popup__title popup__name popup__text form__input"
             type="text"
-            name="lugar"
+            name="name"
             id="place"
             placeholder="Título"
             minlength="2"
@@ -143,7 +185,7 @@
           <input
             class="popup__link popup__text form__input"
             type="url"
-            name="paisaje"
+            name="link"
             id="link"
             placeholder="Enlace a la imagen"
             minlength="7"

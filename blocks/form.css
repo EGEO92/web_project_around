@@ -13,6 +13,20 @@
   display: block;
 }
 
+.profile__popup-avatar {
+  background-color: #fff;
+  width: 430px;
+  height: 272px;
+  position: fixed;
+  top: 224px;
+  left: 425px;
+  z-index: 5;
+}
+
+.card__popup-confirmation {
+  height: 181px;
+}
+
 .popup__show {
   visibility: visible;
 }
@@ -38,6 +52,12 @@
   border-left: none;
 }
 
+.popup-div {
+  width: 358px;
+  height: 27px;
+  padding-bottom: 70px;
+}
+
 .popup__name {
   margin-top: 5px;
   margin-bottom: 30px;
@@ -61,6 +81,10 @@
   margin-left: 35px;
   border: none;
   border-radius: 2%;
+}
+
+.popup__submit-avatar {
+  bottom: 36px;
 }
 
 .popup__close {
