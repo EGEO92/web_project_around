@@ -7,8 +7,6 @@ import closeBtnImgSrc from "./images/Close_Icon.png";
 import {
   editButton,
   cardPlaces,
-  inputTitle,
-  inputImg,
   editAvatarBtn,
   addButton,
 } from "../components/utils.js";
@@ -123,32 +121,33 @@ editAvatarBtn.addEventListener("click", () => {
 });
 
 const popupAddCard = new PopupWithForm("#cards-popup", (input) => {
-  api.addCard(input); //manda POST con la carta nueva y la agrega tambien de manera local temporal
-  const newCard = new Card(
-    input,
-    (title, link) => {
-      popupImg.handleOpen(link, title);
-    },
-    userInfo._userId,
-    () => {
-      popupConfirm.open(newCard._id);
-      //api.removeCard(newCard._id);
-    },
-    () => {
-      api.addLike(newCard._id).then((response) => {
-        console.log(response);
-        newCard.updateLikeCounter(response.likes);
-      });
-    },
-    () => {
-      api.removeLike(newCard._id).then((response) => {
-        newCard.updateLikeCounter(response.likes);
-      });
-    }
-  ); //.createCard();
-  console.log(userInfo._userId);
-  cardPlaces.prepend(newCard.createCard());
-  popupAddCard.close();
+  api.addCard(input).then((result) => {
+    const newCard = new Card(
+      result,
+      (title, link) => {
+        popupImg.handleOpen(link, title);
+      },
+      userInfo._userId,
+      () => {
+        popupConfirm.open(newCard._id);
+        //api.removeCard(newCard._id);
+      },
+      () => {
+        api.addLike(newCard._id).then((response) => {
+          console.log(response);
+          newCard.updateLikeCounter(response.likes);
+        });
+      },
+      () => {
+        api.removeLike(newCard._id).then((response) => {
+          newCard.updateLikeCounter(response.likes);
+        });
+      }
+    ); //.createCard();
+    console.log(userInfo._userId);
+    cardPlaces.prepend(newCard.createCard());
+    popupAddCard.close();
+  }); //manda POST con la carta nueva y la agrega tambien de manera local temporal
 });
 popupAddCard.setEventListeners();
 addButton.addEventListener("click", () => {
